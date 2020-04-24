@@ -140,8 +140,9 @@ class TestResNet50API(object):
         Args:
             precision (float): The precision for checking. 
         """
-        res1 = run_infer(self.model, CASE_ROOT + "/resnet_fluid_cpu.yaml",
+        res1 = run_infer(   self.model, CASE_ROOT + "/resnet_fluid_cpu.yaml",
                          self.input_data)
+        a   = 5
         res2 = run_infer(self.model, CASE_ROOT + "/resnet_mkldnn_cpu.yaml",
                          self.input_data)
         result1 = res1[0].data.float_data()
