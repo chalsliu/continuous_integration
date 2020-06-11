@@ -23,3 +23,4 @@ def flip(im):
         return im[:, :, ::-1]
     else:
         return im[:, ::-1]
+        test = 9
